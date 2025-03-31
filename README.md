@@ -1,6 +1,6 @@
 # AI-Image-Generator
 
-This is a program which includes a functional AI image-to-image generation model based off Pix2Pix, taking in an image input and attempting to generate a corresponding image output based off the model's learnings from its trained dataset. Originally developed to generate caricatures based off the original 'Doro' caricature, hence the name, however the model can be trained to generate any desired output given the relevant training material. NOTE: The currently included generator model, trained off 97 different input/output image pairs, is not able to generate sufficiently acceptable output due to a lack of training data.
+This is a program which includes a functional AI image-to-image generation model based off Pix2Pix, taking in an image input and attempting to generate a corresponding image output based off the model's learnings from its trained dataset. Originally developed to generate caricatures based off the original 'Doro' caricature, hence the file names, however the model can be trained to generate any desired output given the relevant training material. NOTE: The currently included generator model, trained off 97 different input/output image pairs, is not able to generate sufficiently acceptable output due to a lack of training data.
 
 File Structure:
 - dataset (Folder): Contains training data in the form of .jpg, .png and .webp image files, labelled in pairs of "imageX_input", "imageX_output", as well as the image outputs of the generator.
