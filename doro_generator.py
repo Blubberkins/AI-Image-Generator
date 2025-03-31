@@ -280,7 +280,7 @@ def train():
                     loss=tf.keras.losses.MeanAbsoluteError())
 
     # Training loop
-    EPOCHS = 20
+    EPOCHS = 10
     for epoch in range(EPOCHS):
         for input_image, target in train_dataset:
             gen_loss, disc_loss = train_step(input_image, target, generator, discriminator)
