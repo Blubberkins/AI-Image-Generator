@@ -1,3 +1,2 @@
 dataset/**/*
 !dataset/.gitkeep
-saved_model/
