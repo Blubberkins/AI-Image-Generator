@@ -1,7 +1,6 @@
-# 'Dorofy' AI Generator
+# AI Image Generator Training File
 
-# Function that creates an AI generator model (based on Pix2Pix) which is trained using pairs of images (labelled imgX_input/imgX_output)
-# The generator will ideally take a humanoid face (possibly anime only, due to its training dataset) image file and output a 'dorofied' version of it as a 256x256p .png file
+# This file initializes an AI generator model (based on Pix2Pix) and trains it using pairs of images (labelled imgX_input/imgX_output) within the 'dataset/train' folder
 
 import tensorflow as tf
 from tensorflow import keras

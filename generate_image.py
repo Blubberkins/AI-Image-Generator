@@ -1,3 +1,7 @@
+# AI Image Generation File
+
+# This file attempts to utilize the trained AI model to generate a new output image based off its learnings when given an input image in 'dataset/test'
+
 import os
 import tensorflow as tf
 from tensorflow.keras.models import load_model
@@ -5,7 +9,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 from image_formatter import preprocess_single_image
-from doro_generator import SelfAttention
+from image_generator import SelfAttention
 
 # Load the trained generator model
 generator = load_model('saved_model/generator.keras', custom_objects={'SelfAttention': SelfAttention})
@@ -31,7 +35,7 @@ def delete_previous_outputs(test_dir):
             file_path = os.path.join(test_dir, file)
             os.remove(file_path)
 
-# Function to process and generate output for the first image in dataset/test
+# Function to process and generate output for the first image in dataset/test - change the 'test_dir' parameter if you wish to use different directory
 def test_and_save_generated_image(test_dir='dataset/test'):
 
     # Delete old generated images
@@ -57,7 +61,7 @@ def test_and_save_generated_image(test_dir='dataset/test'):
     plt.show()
     
     # Save the generated image as a .png file in the same directory
-    output_image_path = os.path.join(test_dir, f"dorofied_{first_image.split('.')[0]}.png")
+    output_image_path = os.path.join(test_dir, f"output_{first_image.split('.')[0]}.png")
     save_generated_image(generated_image[0], output_image_path)  # Save the first image in the batch
 
 # Run the function to test and save the generated image
