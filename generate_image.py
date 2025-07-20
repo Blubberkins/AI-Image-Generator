@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
 from image_formatter import preprocess_single_image
-from image_generator import SelfAttention
+from train_generator import SelfAttention
 
 # Load the trained generator model
 generator = load_model('saved_model/generator.keras', custom_objects={'SelfAttention': SelfAttention})
